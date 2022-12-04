@@ -1,0 +1,143 @@
+h1 {
+    animation: ease-in fade-in 1.5s;
+    color: black;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    left: 75px;
+    right: 75px;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+p {
+    animation: ease-in fade-in 1.5s;
+    text-align: center;
+    margin-top: 40px;
+}
+
+div {
+    animation: ease-in div-drop-in 1s;
+    background-color: white;
+    width: 300px;
+    padding: 50px;
+    position: absolute;
+    top: 20px;
+    left: 650px;
+    margin: -5px 0 0 -5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4); */
+}
+
+@keyframes div-drop-in {
+    0% {
+        margin-top: -500px;
+        opacity: 0;
+    }
+    50% {
+        margin-top: 50px;
+        opacity: 0.5;
+    }
+    100% {
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+    transition: color 1s;
+}
+
+input {
+    animation: ease-in fade-in 1.5s;
+    border: 1px black solid;
+    border-radius: 8%;
+    margin-left: 60px;
+    height: 25px;
+    margin-top: 20px;
+    width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input:focus {
+    border: 1.5px solid blue;
+    outline: 0px;
+}
+
+button {
+    animation: ease-in fade-in 1.5s;
+    border-color: black;
+    outline: 0;
+    border: 1px solid;
+    cursor: pointer;
+    height: 28px;
+    /* padding: 12px 17px; */
+    border-radius: 4px;
+    background-color: rgb(211, 211, 211);
+    color: #222;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: rgb(194, 194, 194);
+}
+
+body {
+    /* background: rgb(255, 136, 136); */
+    /* background-image: linear-gradient(180deg, #ff8888, #ff9797); */
+    background: linear-gradient( 360deg, rgba(255, 136, 136, 1) 0%, rgba(252, 141, 141, 1) 52%, rgba(255, 178, 178, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+small {
+    animation: blinker 1s linear infinite;
+    margin-left: 90px;
+    color: red;
+}
+
+li {
+    animation: linear fade-glide 0.5s;
+    font-size: 25px;
+    text-align: center;
+    width: 200px;
+}
+
+@keyframes fade-glide {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+ul {
+    list-style-type: none;
+    font-weight: bolder;
+}

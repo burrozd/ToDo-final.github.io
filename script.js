@@ -32,6 +32,16 @@ addButton.addEventListener(
         itemLabel.innerText = text; +
         item.appendChild(itemLabel);
 
+        const deleteButton = document.createElement("button");
+        deleteButton.innerText = "🗑";
+        deleteButton.classList.add("deleteBtn");
+        item.append(deleteButton);
+
+        deleteButton.addEventListener("click", () => {
+            item.removeChild(itemLabel);
+            item.removeChild(deleteButton);
+        });
+
         itemLabel.addEventListener("click", function() {
             item.setAttribute("class", "completed");
             completedCount++;
